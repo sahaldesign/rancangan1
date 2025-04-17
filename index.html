@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moh. Sahal Alim - Professional Graphic Designer specializing in branding, poster design, social media, and website design.">
+    <title>Sahal Design | Professional Graphic Designer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --primary: #00B876;
+            --primary-light: #8CFFDB;
+            --dark: #1A1A1A;
+            --dark-light: #2D2D2D;
+            --light: #FFFFFF;
+            --light-gray: #F5F5F5;
+            --gray: #777777;
+            --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode {
+            --primary: #00B876;
+            --primary-light: #004D32;
+            --dark: #F5F5F5;
+            --dark-light: #DDDDDD;
+            --light: #1A1A1A;
+            --light-gray: #2D2D2D;
+            --gray: #BBBBBB;
+            --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-light);
+            color: var(--light);
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            background-color: var(--light);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.sticky {
+            padding: 15px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark);
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            position: relative;
+            color: var(--dark);
+            font-weight: 500;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+
+        .theme-toggle i {
+            font-size: 1.3rem;
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -200px;
+            right: -200px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-container {
+            position: relative;
+            width: 320px;
+            height: 320px;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--box-shadow);
+        }
+
+        .hero-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            padding: 10px 15px;
+            border-radius: 50px;
+            font-weight: 500;
+            box-shadow: var(--box-shadow);
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .hero-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .hero-social a:hover {
+            background-color: var(--primary);
+            color: var(--light);
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .about-card {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-card-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .about-card-title i {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .about-card-title h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .about-card-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--light-gray);
+            padding-bottom: 15px;
+        }
+
+        .about-card-item:last-child {
+            margin-bottom: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .about-card-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .about-card-item-subtitle {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        /* Skills Section */
+        .skills-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .skills-card {
+            background-color: var(--light-gray);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .skills-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .skills-card-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .skills-card-title i {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .skills-card-title h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skills-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-list li i {
+            color: var(--primary);
+            margin-right: 10px;
+        }
+
+        .software-skills {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .software-skill {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background-color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .software-skill:hover {
+            transform: scale(1.1);
+        }
+
+        /* Portfolio Section */
+        .portfolio-filter {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: var(--light-gray);
+            color: var(--dark);
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: var(--light);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--box-shadow);
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 184, 118, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-title {
+            color: var(--light);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .portfolio-category {
+            color: var(--light);
+            font-size: 0.9rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 5px 15px;
+            border-radius: 50px;
+        }
+
+        .portfolio-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-btn:hover {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-gray);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-details {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-details li i {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-details li span {
+            color: var(--gray);
+        }
+
+        .contact-form {
+            background-color: var(--light);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            background-color: var(--light);
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 184, 118, 0.2);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-light);
+            color: var(--light);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .footer-col {
+            flex: 1;
+        }
+
+        .footer-col h4 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--light);
+            opacity: 0.8;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: var(--box-shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            cursor: pointer;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-5px);
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: var(--light);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            transform: scale(0.8);
+            transition: all 0.3s ease;
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--primary);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            margin-bottom: 30px;
+        }
+
+        .modal-header h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .modal-category {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .modal-images {
+            margin-bottom: 30px;
+        }
+
+        .modal-images img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .modal-description h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 150px 0 100px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-image-container {
+                width: 280px;
+                height: 280px;
+            }
+
+            .skills-content,
+            .about-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--light);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-image-container {
+                width: 250px;
+                height: 250px;
+                margin-bottom: 40px;
+            }
+
+            .hero-badge {
+                right: 50%;
+                transform: translateX(50%);
+            }
+
+            .hero-social {
+                justify-content: center;
+            }
+
+            .skills-content,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-image-container {
+                width: 220px;
+                height: 220px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-content {
+                padding: 20px;
+            }
+
+            .modal-header h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span>Sahal Design</span>
+            </a>
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <div class="theme-toggle" id="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                <h1>I'm <span>Moh. Sahal Alim</span><br>Graphic Designer</h1>
+                <p>I create professional graphic designs with expertise in branding, posters, social media, and website UI/UX that help businesses stand out in today's competitive digital landscape.</p>
+                <a href="#portfolio" class="btn">View My Work</a>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
+                <div class="hero-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                <div class="hero-image-container">
+                    <div class="hero-image-bg"></div>
+                    <img src="/api/placeholder/600/600" alt="Moh. Sahal Alim">
+                    <div class="hero-badge">
+                        <span>Graphic Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-card-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">SMK Yadika Karawang 2</div>
+                            <div class="about-card-item-subtitle">Digital Animation (2018-2021)</div>
+                        </div>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">SMK Nu Karawang</div>
+                            <div class="about-card-item-subtitle">(2015-2018)</div>
+                        </div>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">MDE Al-Arsy Art</div>
+                            <div class="about-card-item-subtitle">Multimedia (2019-2021)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-card-title">
+                        <i class="fas fa-building"></i>
+                        <h3>Organizations</h3>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">Saka Wanabakti 2</div>
+                            <div class="about-card-item-subtitle">Member</div>
+                        </div>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">Pramuka</div>
+                            <div class="about-card-item-subtitle">Member</div>
+                        </div>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">Modern Islamic Art Culture</div>
+                            <div class="about-card-item-subtitle">Kertas Putih Dakwah</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="about-card-title">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">Premium Printing</div>
+                            <div class="about-card-item-subtitle">Designer (2020-2022)</div>
+                        </div>
+                    </div>
+                    <div class="about-card-item">
+                        <div>
+                            <div class="about-card-item-title">Monza Group</div>
+                            <div class="about-card-item-subtitle">Designer (2022-2024)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 data-aos="fade-up">My Skills</h2>
+            <div class="skills-content">
+                <div class="skills-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skills-card-title">
+                        <i class="fas fa-user"></i>
+                        <h3>Personal</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> Time Management</li>
+                        <li><i class="fas fa-check-circle"></i> Problem Solving</li>
+                        <li><i class="fas fa-check-circle"></i> Team Work</li>
+                        <li><i class="fas fa-check-circle"></i> Communication</li>
+                    </ul>
+                </div>
+                <div class="skills-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skills-card-title">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>Design Skills</h3>
+                    </div>
+                    <ul class="skills-list">
+                        <li><i class="fas fa-check-circle"></i> Branding Design</li>
+                        <li><i class="fas fa-check-circle"></i> Poster Design</li>
+                        <li><i class="fas fa-check-circle"></i> Flyer Design</li>
+                        <li><i class="fas fa-check-circle"></i> Social Media Design</li>
+                        <li><i class="fas fa-check-circle"></i> Website UI Design</li>
+                    </ul>
+                </div>
+                <div class="skills-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skills-card-title">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Software Skills</h3>
+                    </div>
+                    <div class="software-skills">
+                        <div class="software-skill" title="Adobe Illustrator">
+                            <i class="fab fa-adobe" style="color: #FF9A00;"></i>
+                        </div>
+                        <div class="software-skill" title="Adobe Photoshop">
+                            <i class="fab fa-adobe" style="color: #31A8FF;"></i>
+                        </div>
+                        <div class="software-skill" title="Figma">
+                            <i class="fab fa-figma" style="color: #F24E1E;"></i>
+                        </div>
+                        <div class="software-skill" title="Adobe XD">
+                            <i class="fab fa-adobe" style="color: #FF61F6;"></i>
+                        </div>
+                        <div class="software-skill" title="Sketch">
+                            <i class="fas fa-pencil-alt" style="color: #F7B500;"></i>
+                        </div>
+                        <div class="software-skill" title="Blender">
+                            <i class="fas fa-cube" style="color: #F5792A;"></i>
+                        </div>
+                        <div class="software-skill" title="Adobe After Effects">
+                            <i class="fab fa-adobe" style="color: #9999FF;"></i>
+                        </div>
+                        <div class="software-skill" title="Canva">
+                            <i class="fas fa-palette" style="color: #00C4CC;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 data-aos="fade-up">My Portfolio</h2>
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="poster">Poster</button>
+                <button class="filter-btn" data-filter="social-media">Social Media</button>
+                <button class="filter-btn" data-filter="website">Website</button>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Branding Projects -->
+                <div class="portfolio-item" data-category="branding" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/600/400" alt="Monza Group Branding">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Monza Group</h3>
+                        <span class="portfolio-category">Branding Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project1">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/600/400" alt="Brand Identity">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Tech Company Rebrand</h3>
+                        <span class="portfolio-category">Branding Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project2">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Poster Projects -->
+                <div class="portfolio-item" data-category="poster" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/api/placeholder/600/400" alt="Burger Poster">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Burger Promotion</h3>
+                        <span class="portfolio-category">Poster Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project3">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="poster" data-aos="fade-up" data-aos-delay="400">
+                    <img src="/api/placeholder/600/400" alt="Restaurant Menu">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Restaurant Menu</h3>
+                        <span class="portfolio-category">Poster Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project4">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Social Media Projects -->
+                <div class="portfolio-item" data-category="social-media" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/600/400" alt="Food Instagram">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Food Campaign</h3>
+                        <span class="portfolio-category">Social Media Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project5">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social-media" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/600/400" alt="Promotion Posts">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Product Launch</h3>
+                        <span class="portfolio-category">Social Media Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project6">View Details</a>
+                    </div>
+                </div>
+                
+                <!-- Website Projects -->
+                <div class="portfolio-item" data-category="website" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/api/placeholder/600/400" alt="Construction Website">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Sconstruction</h3>
+                        <span class="portfolio-category">Website Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project7">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="website" data-aos="fade-up" data-aos-delay="400">
+                    <img src="/api/placeholder/600/400" alt="E-commerce Website">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">E-commerce Platform</h3>
+                        <span class="portfolio-category">Website Design</span>
+                        <a href="#" class="portfolio-btn" data-modal="project8">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Let's Talk About Your Project</h3>
+                    <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>sahaldesign@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karawang, Indonesia</span>
+                        </li>
+                    </ul>
+                    <div class="hero-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form" data-aos="fade-left">
+                    <h3>Send Me A Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Sahal Design</h4>
+                    <p>Professional graphic designer specializing in branding, poster design, social media content, and website UI/UX.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Brand Identity</a></li>
+                        <li><a href="#">Poster Design</a></li>
+                        <li><a href="#">Social Media Graphics</a></li>
+                        <li><a href="#">Website UI/UX</a></li>
+                        <li><a href="#">Print Design</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sahal Design. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Project Modals -->
+    <div class="modal" id="modal-project1">
+        <div class="modal-content">
+            <span class="modal-close"><i class="fas fa-times"></i></span>
+            <div class="modal-header">
+                <span class="modal-category">Branding Design</span>
+                <h3>Monza Group</h3>
+            </div>
+            <div class="modal-images">
+                <img src="/api/placeholder/800/500" alt="Monza Group Logo">
+                <img src="/api/placeholder/800/500" alt="Monza Group Brand Identity">
+            </div>
+            <div class="modal-description">
+                <h4>Project Description</h4>
+                <p>Complete brand identity design for Monza Group, including logo design, business cards, letterhead, and brand guidelines. The design focused on creating a modern, professional identity that reflects the company's values and vision.</p>
+                <h4>Project Details</h4>
+                <p>Client: Monza Group<br>
+                Duration: 4 weeks<br>
+                Services: Logo Design, Brand Identity, Print Design</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+
+        // DOM Elements
+        const header = document.getElementById('header');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const themeToggle = document.getElementById('theme-toggle');
+        const backToTop = document.getElementById('backToTop');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const modalBtns = document.querySelectorAll('.portfolio-btn');
+        const modals = document.querySelectorAll('.modal');
+        const modalCloses = document.querySelectorAll('.modal-close');
+        const contactForm = document.getElementById('contactForm');
+
+        // Check for saved theme preference or prefer-color-scheme
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
+            document.body.classList.add('dark-mode');
+            themeToggle.querySelector('i').classList.remove('fa-moon');
+            themeToggle.querySelector('i').classList.add('fa-sun');
+        }
+
+        // Toggle Theme
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggle.querySelector('i').classList.remove('fa-moon');
+                themeToggle.querySelector('i').classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeToggle.querySelector('i').classList.remove('fa-sun');
+                themeToggle.querySelector('i').classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+
+            // Back to Top Button
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+        });
+
+        // Mobile Menu Toggle
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Portfolio Filter
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        modalBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const modalId = btn.getAttribute('data-modal');
+                document.getElementById(`modal-${modalId}`).classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modalCloses.forEach(close => {
+            close.addEventListener('click', () => {
+                modals.forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Back to Top Button
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Validation
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            
+            if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Form submission success (in real implementation, you would send data to server)
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+        
+        // Email validation helper function
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // Lazy load portfolio images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img');
+            
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const image = entry.target;
+                            const src = image.getAttribute('data-src');
+                            if (src) {
+                                image.src = src;
+                                image.removeAttribute('data-src');
+                            }
+                            imageObserver.unobserve(image);
+                        }
+                    });
+                });
+                
+                images.forEach(img => {
+                    imageObserver.observe(img);
+                });
+            } else {
+                // Fallback for browsers that don't support Intersection Observer
+                images.forEach(img => {
+                    const src = img.getAttribute('data-src');
+                    if (src) {
+                        img.src = src;
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
